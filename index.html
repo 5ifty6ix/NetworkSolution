@@ -246,7 +246,7 @@
 
     <script>
         // PUT YOUR BANGLADESHI WHATSAPP NUMBER HERE (Format: 8801...)
-        const whatsappNumber = "8801605696443"; 
+        const whatsappNumber = "8801XXXXXXXXX"; 
         
         // Update the hero button link dynamically
         document.getElementById('hero-support-btn').href = `https://wa.me/${whatsappNumber}`;
@@ -288,8 +288,11 @@
                             return `<li><span>${f}</span><span>✓</span></li>`;
                         }).join('');
 
-                        // Construct the pre-filled WhatsApp message
-                        const textMessage = `Hi! I'm interested in getting a new package:\n\n*${category.title}*\nPackage: *${pkg.name}*\nPrice: *${pkg.price}*\n\nCan you help me set this up?`;
+                        // Construct the full features list for the WhatsApp message
+                        const featuresListForWa = pkg.features.map(f => `• ${f}`).join('\n');
+
+                        // Construct the pre-filled WhatsApp message with FULL details
+                        const textMessage = `Hi! I'm interested in getting a new package:\n\n*${category.title}*\nPackage: *${pkg.name}*\nPrice: *${pkg.price}*\n\n*Details:*\n${featuresListForWa}\n\nCan you help me set this up?`;
                         const encodedMessage = encodeURIComponent(textMessage);
                         const waLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 
