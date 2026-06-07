@@ -197,7 +197,7 @@
         <p>সর্বোচ্চ মানের VLESS, SNI, এবং WireGuard CGNAT বাইপাস সার্ভিস</p>
         <div class="hero-buttons">
             <a href="#pricing" class="btn-primary">View Pricing</a>
-            <a href="YOUR_TELEGRAM_LINK_HERE" class="btn-outline">Contact Support</a>
+            <a href="https://wa.me/8801XXXXXXXXX" class="btn-outline" id="hero-support-btn">Contact Support</a>
         </div>
     </div>
 
@@ -219,7 +219,7 @@
             </div>
             <div class="card">
                 <h3>🎧 24/7 Professional Support</h3>
-                <p>Round-the-clock technical assistance directly via Telegram. We are always here to resolve your network issues instantly.</p>
+                <p>Round-the-clock technical assistance directly via WhatsApp. We are always here to resolve your network issues instantly.</p>
             </div>
         </div>
 
@@ -235,7 +235,7 @@
         </details>
         <details>
             <summary>How do I receive my package after payment?</summary>
-            <p>All transactions, setup instructions, and file deliveries are handled securely and directly through our Telegram inbox to ensure you get personalized support.</p>
+            <p>All transactions, setup instructions, and file deliveries are handled securely and directly through our WhatsApp Business account to ensure you get personalized support.</p>
         </details>
         <details>
             <summary>Is there a device limit?</summary>
@@ -245,7 +245,11 @@
     </div>
 
     <script>
-        const telegramLink = "YOUR_TELEGRAM_LINK_HERE"; 
+        // PUT YOUR BANGLADESHI WHATSAPP NUMBER HERE (Format: 8801...)
+        const whatsappNumber = "8801605696443"; 
+        
+        // Update the hero button link dynamically
+        document.getElementById('hero-support-btn').href = `https://wa.me/${whatsappNumber}`;
 
         const fetchUrl = 'data.json?v=' + new Date().getTime();
 
@@ -284,13 +288,18 @@
                             return `<li><span>${f}</span><span>✓</span></li>`;
                         }).join('');
 
+                        // Construct the pre-filled WhatsApp message
+                        const textMessage = `Hi! I'm interested in getting a new package:\n\n*${category.title}*\nPackage: *${pkg.name}*\nPrice: *${pkg.price}*\n\nCan you help me set this up?`;
+                        const encodedMessage = encodeURIComponent(textMessage);
+                        const waLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
                         card.innerHTML = `
                             <h3 style="color: ${category.themeColor}">${pkg.name}</h3>
                             <div class="price-badge">${pkg.price}</div>
                             <ul class="features-list">
                                 ${featuresHTML}
                             </ul>
-                            <a href="${telegramLink}" class="btn-primary" style="display: block; text-align: center; margin-top: 20px;">Get Started</a>
+                            <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: block; text-align: center; margin-top: 20px;">Get Started</a>
                         `;
                         grid.appendChild(card);
                     });
