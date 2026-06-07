@@ -1,27 +1,29 @@
 {
   "categories": [
     {
-      "title": "📱 CATEGORY 1: SIM BYPASS (Daily Usage)",
+      "title": "📱 CATEGORY 1: DAILY USAGE",
       "themeColor": "#38bdf8",
       "packages": [
         {
           "name": "Lite",
-          "price": "60 TK / 30 Days | 100 TK / 60 Days",
+          "price": "60 TK / 30 Days",
           "features": [
             "Speed: 40 Mbps",
             "Bandwidth: 500 GB",
-            "Protocol: VLESS + SNI",
-            "Server: Germany (2.5G)"
+            "Ping: 120-130 ms",
+            "Protocol: VLESS",
+            "Server: Germany"
           ]
         },
         {
           "name": "Max",
-          "price": "100 TK / 30 Days | 180 TK / 60 Days",
+          "price": "100 TK / 30 Days",
           "features": [
             "Speed: 100 Mbps",
             "Bandwidth: Unlimited",
-            "Protocol: VLESS + SNI",
-            "Server: Germany (2.5G)"
+            "Ping: 120-130 ms",
+            "Protocol: VLESS",
+            "Server: Germany"
           ]
         }
       ]
@@ -32,23 +34,23 @@
       "packages": [
         {
           "name": "Mobile Gamer",
-          "price": "70 TK / 30 Days | 120 TK / 60 Days",
+          "price": "70 TK / 30 Days",
           "features": [
             "Speed: 10 Mbps",
             "Bandwidth: 20 GB",
             "PUBG/FF Ping: 20-30 ms",
-            "Protocol: VLESS + SNI",
+            "Protocol: VLESS",
             "Server: Bangladesh (BDIX)"
           ]
         },
         {
           "name": "Streamer",
-          "price": "120 TK / 30 Days | 200 TK / 60 Days",
+          "price": "120 TK / 30 Days",
           "features": [
             "Speed: 25 Mbps",
             "Bandwidth: 50 GB",
             "PUBG/FF Ping: 20-30 ms",
-            "Protocol: VLESS + SNI",
+            "Protocol: VLESS",
             "Server: Bangladesh (BDIX)"
           ]
         }
@@ -60,23 +62,23 @@
       "packages": [
         {
           "name": "Standard Combo",
-          "price": "90 TK / 30 Days | 170 TK / 60 Days",
+          "price": "90 TK / 30 Days",
           "features": [
             "Speed: 20 Mbps",
             "Bandwidth: 100 GB",
             "PUBG/FF Ping: 20-30 ms",
-            "Protocol: VLESS + SNI",
+            "Protocol: VLESS",
             "Server: Bangladesh (BDIX)"
           ]
         },
         {
           "name": "Heavy Combo",
-          "price": "150 TK / 30 Days | 270 TK / 60 Days",
+          "price": "150 TK / 30 Days",
           "features": [
             "Speed: 50 Mbps",
             "Bandwidth: 250 GB",
             "PUBG/FF Ping: 20-30 ms",
-            "Protocol: VLESS + SNI",
+            "Protocol: VLESS",
             "Server: Bangladesh (BDIX)"
           ]
         }
@@ -88,22 +90,22 @@
       "packages": [
         {
           "name": "Advanced",
-          "price": "150 TK / 30 Days | 280 TK / 60 Days",
+          "price": "150 TK / 30 Days",
           "features": [
             "Speed: 200 Mbps",
             "Bandwidth: Unlimited",
-            "Custom Ports: 50 Public Ports",
+            "Custom Ports: 10 Public Ports",
             "IP Setup: IPv4 Only",
             "Protocol: WireGuard"
           ]
         },
         {
           "name": "Ultimate",
-          "price": "250 TK / 30 Days | 450 TK / 60 Days",
+          "price": "250 TK / 30 Days",
           "features": [
             "Speed: 500 Mbps",
             "Bandwidth: Unlimited",
-            "Custom Ports: 100 Public Ports",
+            "Custom Ports: 25 Public Ports",
             "IP Setup: IPv4 + IPv6",
             "Protocol: WireGuard"
           ]
