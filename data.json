@@ -1,0 +1,36 @@
+{
+  "categories": [
+    {
+      "title": "📱 CATEGORY 1: DAILY USAGE",
+      "themeColor": "#3b82f6",
+      "packages": [
+        {
+          "name": "Package 01 (Regular User)",
+          "price": "40 TK / 30 Days | 80 TK / 60 Days",
+          "features": ["Speed: 40 Mbps", "Ping: 100/110 ms", "BW Limit: 500 GB", "Protocol: vless", "Stock: 10"]
+        },
+        {
+          "name": "Package 02 (Heavy User)",
+          "price": "80 TK / 30 Days | 150 TK / 60 Days",
+          "features": ["Speed: 100 Mbps", "Ping: 100/110 ms", "BW Limit: Unlimited", "Protocol: vless", "Stock: 5"]
+        }
+      ]
+    },
+    {
+      "title": "🎮 CATEGORY 2: PREMIUM GAMING",
+      "themeColor": "#10b981",
+      "packages": [
+        {
+          "name": "Package 01 (Regular Gamer)",
+          "price": "40 TK / 30 Days | 70 TK / 60 Days",
+          "features": ["Speed: 10 Mbps", "Ping (PUBG/FF): 20/30 ms", "BW Limit: 20 GB", "Protocol: vless", "Stock: 10"]
+        },
+        {
+          "name": "Package 02 (Heavy Gamer)",
+          "price": "80 TK / 30 Days | 150 TK / 60 Days",
+          "features": ["Speed: 25 Mbps", "Ping (PUBG/FF): 20/30 ms", "BW Limit: 50 GB", "Protocol: vless", "Stock: 5"]
+        }
+      ]
+    }
+  ]
+}
