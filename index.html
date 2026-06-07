@@ -243,8 +243,16 @@
     <script>
         const telegramLink = "YOUR_TELEGRAM_LINK_HERE"; 
 
-        fetch('data.json')
-            .then(response => response.json())
+        // Added a cache-buster (?v=...) to force the browser to get the newest file
+        const fetchUrl = 'data.json?v=' + new Date().getTime();
+
+        fetch(fetchUrl)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
             .then(data => {
                 const container = document.getElementById('pricing-container');
                 container.innerHTML = ''; 
@@ -253,6 +261,7 @@
                     const title = document.createElement('h3');
                     title.className = 'cat-title';
                     title.textContent = category.title;
+                    title.style.borderLeftColor = category.themeColor; // Adds subtle color hint
                     container.appendChild(title);
 
                     const grid = document.createElement('div');
@@ -262,17 +271,19 @@
                         const card = document.createElement('div');
                         card.className = 'card';
 
-                        // Split features by colon to make left/right alignment in the new design
+                        // Improved splitting logic to prevent errors
                         const featuresHTML = pkg.features.map(f => {
-                            const parts = f.split(':');
-                            if(parts.length === 2) {
-                                return `<li><span>${parts[0]}</span><span>${parts[1]}</span></li>`;
+                            const splitIndex = f.indexOf(':');
+                            if (splitIndex > -1) {
+                                const key = f.substring(0, splitIndex).trim();
+                                const value = f.substring(splitIndex + 1).trim();
+                                return `<li><span>${key}</span><span>${value}</span></li>`;
                             }
                             return `<li><span>${f}</span><span>✓</span></li>`;
                         }).join('');
 
                         card.innerHTML = `
-                            <h3>${pkg.name}</h3>
+                            <h3 style="color: ${category.themeColor}">${pkg.name}</h3>
                             <div class="price-badge">${pkg.price}</div>
                             <ul class="features-list">
                                 ${featuresHTML}
