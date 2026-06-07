@@ -4,186 +4,290 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5ifty6ix Network Solution</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Premium Dark Theme CSS */
+        /* Base Dark Theme */
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #0f172a; /* Deep navy/black background */
-            color: #f8fafc;
+            font-family: 'Inter', sans-serif;
+            background-color: #000000;
+            color: #a3a3a3;
             margin: 0;
             padding: 0;
             line-height: 1.6;
         }
-        .header {
+
+        /* Typography & Glow Effects */
+        h1, h2, h3 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+        .glow-text {
+            text-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.2);
+            letter-spacing: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(to bottom, #1e293b, #0f172a);
-            border-bottom: 1px solid #334155;
+            padding: 100px 20px 60px 20px;
+            background: radial-gradient(circle at center, #111 0%, #000 70%);
         }
-        .header h1 {
+        .hero h1 {
+            font-size: 3.5em;
             margin: 0;
-            font-size: 3em;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -1px;
+            font-weight: 900;
         }
-        .header p {
-            color: #94a3b8;
+        .hero p {
             font-size: 1.2em;
-            margin-top: 10px;
+            max-width: 600px;
+            margin: 20px auto;
+            color: #888;
         }
+        .hero-buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background-color: #ffffff;
+            color: #000000;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-primary:hover {
+            background-color: #cccccc;
+            box-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: #ffffff;
+            border: 1px solid #333;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .btn-outline:hover {
+            border-color: #fff;
+            box-shadow: 0 0 15px rgba(255,255,255,0.1);
+        }
+
+        /* Layout Container */
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 40px 20px;
         }
-        .category-title {
-            font-size: 1.5em;
-            color: #f1f5f9;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #334155;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            margin-top: 60px;
         }
+
+        /* Feature & Pricing Cards */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
         .card {
-            background-color: #1e293b;
-            border: 1px solid #334155;
+            background-color: #0a0a0a;
+            border: 1px solid #1a1a1a;
             border-radius: 16px;
             padding: 30px;
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            overflow: hidden;
+            transition: transform 0.3s, border-color 0.3s;
         }
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
-            border-color: #475569;
+            border-color: #333;
+            box-shadow: 0 10px 30px rgba(255,255,255,0.02);
         }
         .card h3 {
-            margin: 0 0 15px 0;
-            font-size: 1.4em;
-            color: #f8fafc;
+            font-size: 1.3em;
+            margin-top: 0;
+            letter-spacing: 1px;
         }
+        
+        /* Pricing Specifics */
         .price-badge {
-            background-color: #0f172a;
-            border: 1px solid #334155;
-            color: #38bdf8;
-            padding: 12px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 20px;
-            font-size: 1.1em;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2em;
+            color: #fff;
+            margin: 15px 0;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #1a1a1a;
         }
-        .features {
+        .features-list {
             list-style: none;
             padding: 0;
-            margin: 0 0 30px 0;
-            flex-grow: 1;
+            margin: 0 0 25px 0;
         }
-        .features li {
+        .features-list li {
             padding: 8px 0;
-            border-bottom: 1px solid #334155;
-            color: #cbd5e1;
-            font-size: 0.95em;
+            font-size: 0.9em;
             display: flex;
-            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #111;
         }
-        .features li::before {
-            content: "✓";
-            color: #10b981;
-            font-weight: bold;
-            margin-right: 10px;
+        .features-list li span:first-child {
+            color: #666;
         }
-        .features li:last-child {
-            border-bottom: none;
+        .features-list li span:last-child {
+            color: #eee;
+            font-weight: 500;
         }
-        .cta-btn {
-            display: block;
-            text-align: center;
-            background-color: #3b82f6;
-            color: white;
-            padding: 14px;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: background-color 0.2s;
+
+        /* FAQ Accordion */
+        details {
+            background-color: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            padding: 15px 20px;
         }
-        .cta-btn:hover {
-            background-color: #2563eb;
+        summary {
+            color: #fff;
+            font-weight: 500;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::after {
+            content: '+';
+            color: #666;
+            font-size: 1.2em;
+        }
+        details[open] summary::after {
+            content: '-';
+        }
+        details p {
+            margin-top: 15px;
+            color: #888;
+            font-size: 0.9em;
+        }
+
+        /* Category Titles for Pricing */
+        .cat-title {
+            color: #fff;
+            font-size: 1.5em;
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding-left: 10px;
+            border-left: 3px solid #fff;
         }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>5ifty6ix Network</h1>
-        <p>Premium Routing, CGNAT Bypass & Gaming Solutions</p>
+    <div class="hero">
+        <h1 class="glow-text">PREMIUM<br>NETWORK BYPASS<br>SOLUTIONS</h1>
+        <p>সর্বোচ্চ মানের VLESS, SNI, এবং WireGuard CGNAT বাইপাস সার্ভিস</p>
+        <div class="hero-buttons">
+            <a href="#pricing" class="btn-primary">View Pricing</a>
+            <a href="YOUR_TELEGRAM_LINK_HERE" class="btn-outline">Contact Support</a>
+        </div>
     </div>
 
-    <div class="container" id="pricing-container">
-        <p style="text-align: center; color: #94a3b8;">Loading latest packages...</p>
+    <div class="container">
+        
+        <h2 class="section-title glow-text">Key Features</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>⚡ High-Speed Routing</h3>
+                <p>Enjoy blazing fast speeds with our optimized routing protocols specifically tailored for daily use and heavy streaming.</p>
+            </div>
+            <div class="card">
+                <h3>🎮 Ultra-Low Ping</h3>
+                <p>Dedicated premium gaming lines designed to reduce latency for PUBG, Free Fire, and competitive mobile gaming.</p>
+            </div>
+            <div class="card">
+                <h3>🔒 CGNAT Bypass</h3>
+                <p>Advanced WireGuard configurations providing custom public ports to seamlessly bypass your ISP restrictions.</p>
+            </div>
+        </div>
+
+        <h2 id="pricing" class="section-title glow-text">Pricing Plans</h2>
+        <div id="pricing-container">
+            <p style="text-align: center;">Loading packages...</p>
+        </div>
+
+        <h2 class="section-title glow-text">Frequently Asked Questions</h2>
+        <details>
+            <summary>What protocols do you support?</summary>
+            <p>We primarily utilize custom VLESS + SNI configurations for our standard and gaming packages, and WireGuard for our advanced ISP CGNAT bypass packages.</p>
+        </details>
+        <details>
+            <summary>How do I receive my package after payment?</summary>
+            <p>All transactions, setup instructions, and file deliveries are handled securely and directly through our Telegram inbox to ensure you get personalized support.</p>
+        </details>
+        <details>
+            <summary>Is there a device limit?</summary>
+            <p>Please contact our support regarding simultaneous connections, as limits may vary based on whether you are using a daily, heavy, or CGNAT bypass package.</p>
+        </details>
+
     </div>
 
     <script>
-        // This script fetches the data from data.json and builds the website
-        const telegramLink = "YOUR_TELEGRAM_LINK_HERE"; // Put your inbox link here
+        const telegramLink = "YOUR_TELEGRAM_LINK_HERE"; 
 
         fetch('data.json')
             .then(response => response.json())
             .then(data => {
                 const container = document.getElementById('pricing-container');
-                container.innerHTML = ''; // Clear the "Loading" text
+                container.innerHTML = ''; 
 
                 data.categories.forEach(category => {
-                    // Create Category Title
-                    const title = document.createElement('h2');
-                    title.className = 'category-title';
+                    const title = document.createElement('h3');
+                    title.className = 'cat-title';
                     title.textContent = category.title;
                     container.appendChild(title);
 
-                    // Create Grid for this Category
                     const grid = document.createElement('div');
                     grid.className = 'grid';
 
-                    // Create Cards
                     category.packages.forEach(pkg => {
                         const card = document.createElement('div');
                         card.className = 'card';
-                        card.style.borderTop = `4px solid ${category.themeColor}`;
 
-                        // Build the features list
-                        const featuresHTML = pkg.features.map(f => `<li>${f}</li>`).join('');
+                        // Split features by colon to make left/right alignment in the new design
+                        const featuresHTML = pkg.features.map(f => {
+                            const parts = f.split(':');
+                            if(parts.length === 2) {
+                                return `<li><span>${parts[0]}</span><span>${parts[1]}</span></li>`;
+                            }
+                            return `<li><span>${f}</span><span>✓</span></li>`;
+                        }).join('');
 
                         card.innerHTML = `
                             <h3>${pkg.name}</h3>
                             <div class="price-badge">${pkg.price}</div>
-                            <ul class="features">
+                            <ul class="features-list">
                                 ${featuresHTML}
                             </ul>
-                            <a href="${telegramLink}" class="cta-btn">Order via Inbox</a>
+                            <a href="${telegramLink}" class="btn-primary" style="display: block; text-align: center; margin-top: 20px;">Get Started</a>
                         `;
                         grid.appendChild(card);
                     });
-
                     container.appendChild(grid);
                 });
             })
             .catch(error => {
                 console.error("Error loading pricing data:", error);
                 document.getElementById('pricing-container').innerHTML = 
-                    "<p style='text-align:center; color:#ef4444;'>Error loading packages. Please refresh the page.</p>";
+                    "<p style='text-align:center; color:#ff4444;'>Error loading packages. Please refresh the page.</p>";
             });
     </script>
 </body>
