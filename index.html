@@ -6,7 +6,6 @@
     <title>5ifty6ix Network Solution</title>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Base Dark Theme */
         body {
             font-family: 'Inter', sans-serif;
             background-color: #000000;
@@ -15,8 +14,6 @@
             padding: 0;
             line-height: 1.6;
         }
-
-        /* Typography & Glow Effects */
         h1, h2, h3 {
             font-family: 'Orbitron', sans-serif;
             color: #ffffff;
@@ -26,8 +23,6 @@
             text-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.2);
             letter-spacing: 2px;
         }
-
-        /* Hero Section */
         .hero {
             text-align: center;
             padding: 100px 20px 60px 20px;
@@ -50,8 +45,6 @@
             justify-content: center;
             gap: 15px;
         }
-
-        /* Buttons */
         .btn-primary {
             background-color: #ffffff;
             color: #000000;
@@ -79,8 +72,6 @@
             border-color: #fff;
             box-shadow: 0 0 15px rgba(255,255,255,0.1);
         }
-
-        /* Layout Container */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -92,8 +83,6 @@
             margin-bottom: 40px;
             margin-top: 60px;
         }
-
-        /* Feature & Pricing Cards */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -116,8 +105,6 @@
             margin-top: 0;
             letter-spacing: 1px;
         }
-        
-        /* Pricing Specifics */
         .price-badge {
             font-family: 'Orbitron', sans-serif;
             font-size: 1.2em;
@@ -145,8 +132,6 @@
             color: #eee;
             font-weight: 500;
         }
-
-        /* FAQ Accordion */
         details {
             background-color: #0a0a0a;
             border: 1px solid #1a1a1a;
@@ -178,8 +163,6 @@
             color: #888;
             font-size: 0.9em;
         }
-
-        /* Category Titles for Pricing */
         .cat-title {
             color: #fff;
             font-size: 1.5em;
@@ -191,18 +174,15 @@
     </style>
 </head>
 <body>
-
     <div class="hero">
         <h1 class="glow-text">PREMIUM<br>NETWORK BYPASS<br>SOLUTIONS</h1>
         <p>সর্বোচ্চ মানের নেটওয়ার্ক রেস্ট্রিকশন বাইপাস সার্ভিস</p>
         <div class="hero-buttons">
             <a href="#pricing" class="btn-primary">View Pricing</a>
-            <a href="https://wa.me/8801XXXXXXXXX" class="btn-outline" id="hero-support-btn">Contact Support</a>
+            <a href="https://wa.me/8801605696443" class="btn-outline" id="hero-support-btn">Contact Support</a>
         </div>
     </div>
-
     <div class="container">
-        
         <h2 class="section-title glow-text">Key Features</h2>
         <div class="grid">
             <div class="card">
@@ -222,12 +202,10 @@
                 <p>Round the clock technical assistance directly via WhatsApp. We are always here to resolve your network issues instantly.</p>
             </div>
         </div>
-
         <h2 id="pricing" class="section-title glow-text">Pricing Plans</h2>
         <div id="pricing-container">
             <p style="text-align: center;">Loading packages...</p>
         </div>
-
         <h2 class="section-title glow-text">Frequently Asked Questions</h2>
         <details>
             <summary>What protocols do you support?</summary>
@@ -241,18 +219,11 @@
             <summary>Is there a device limit?</summary>
             <p>Please contact our support regarding simultaneous connections, as limits may vary based on whether you are using a daily, heavy, or CGNAT bypass package.</p>
         </details>
-
     </div>
-
     <script>
-        // PUT YOUR BANGLADESHI WHATSAPP NUMBER HERE (Format: 8801...)
         const whatsappNumber = "8801605696443"; 
-        
-        // Update the hero button link dynamically
         document.getElementById('hero-support-btn').href = `https://wa.me/${whatsappNumber}`;
-
         const fetchUrl = 'data.json?v=' + new Date().getTime();
-
         fetch(fetchUrl)
             .then(response => {
                 if (!response.ok) {
@@ -263,21 +234,17 @@
             .then(data => {
                 const container = document.getElementById('pricing-container');
                 container.innerHTML = ''; 
-
                 data.categories.forEach(category => {
                     const title = document.createElement('h3');
                     title.className = 'cat-title';
                     title.textContent = category.title;
                     title.style.borderLeftColor = category.themeColor; 
                     container.appendChild(title);
-
                     const grid = document.createElement('div');
                     grid.className = 'grid';
-
                     category.packages.forEach(pkg => {
                         const card = document.createElement('div');
                         card.className = 'card';
-
                         const featuresHTML = pkg.features.map(f => {
                             const splitIndex = f.indexOf(':');
                             if (splitIndex > -1) {
@@ -287,15 +254,10 @@
                             }
                             return `<li><span>${f}</span><span>✓</span></li>`;
                         }).join('');
-
-                        // Construct the full features list for the WhatsApp message
                         const featuresListForWa = pkg.features.map(f => `• ${f}`).join('\n');
-
-                        // Construct the pre-filled WhatsApp message with FULL details
                         const textMessage = `Hi! I'm interested in getting a new package:\n\n*${category.title}*\nPackage: *${pkg.name}*\nPrice: *${pkg.price}*\n\n*Details:*\n${featuresListForWa}\n\nCan you help me set this up?`;
                         const encodedMessage = encodeURIComponent(textMessage);
                         const waLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-
                         card.innerHTML = `
                             <h3 style="color: ${category.themeColor}">${pkg.name}</h3>
                             <div class="price-badge">${pkg.price}</div>
