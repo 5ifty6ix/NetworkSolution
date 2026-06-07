@@ -1,34 +1,113 @@
 {
   "categories": [
     {
-      "title": "📱 CATEGORY 1: DAILY USAGE",
-      "themeColor": "#3b82f6",
+      "title": "📱 CATEGORY 1: SIM BYPASS (Daily Usage)",
+      "themeColor": "#38bdf8",
       "packages": [
         {
-          "name": "Package 01 (Regular User)",
-          "price": "40 TK / 30 Days | 80 TK / 60 Days",
-          "features": ["Speed: 40 Mbps", "Ping: 100/110 ms", "BW Limit: 500 GB", "Protocol: vless", "Stock: 10"]
+          "name": "Lite",
+          "price": "60 TK / 30 Days | 100 TK / 60 Days",
+          "features": [
+            "Speed: 40 Mbps",
+            "Bandwidth: 500 GB",
+            "Protocol: VLESS + SNI",
+            "Server: Germany (2.5G)"
+          ]
         },
         {
-          "name": "Package 02 (Heavy User)",
-          "price": "80 TK / 30 Days | 150 TK / 60 Days",
-          "features": ["Speed: 100 Mbps", "Ping: 100/110 ms", "BW Limit: Unlimited", "Protocol: vless", "Stock: 5"]
+          "name": "Max",
+          "price": "100 TK / 30 Days | 180 TK / 60 Days",
+          "features": [
+            "Speed: 100 Mbps",
+            "Bandwidth: Unlimited",
+            "Protocol: VLESS + SNI",
+            "Server: Germany (2.5G)"
+          ]
         }
       ]
     },
     {
-      "title": "🎮 CATEGORY 2: PREMIUM GAMING",
+      "title": "🎮 CATEGORY 2: E-SPORTS GAMING",
       "themeColor": "#10b981",
       "packages": [
         {
-          "name": "Package 01 (Regular Gamer)",
-          "price": "40 TK / 30 Days | 70 TK / 60 Days",
-          "features": ["Speed: 10 Mbps", "Ping (PUBG/FF): 20/30 ms", "BW Limit: 20 GB", "Protocol: vless", "Stock: 10"]
+          "name": "Mobile Gamer",
+          "price": "70 TK / 30 Days | 120 TK / 60 Days",
+          "features": [
+            "Speed: 10 Mbps",
+            "Bandwidth: 20 GB",
+            "PUBG/FF Ping: 20-30 ms",
+            "Protocol: VLESS + SNI",
+            "Server: Bangladesh (BDIX)"
+          ]
         },
         {
-          "name": "Package 02 (Heavy Gamer)",
-          "price": "80 TK / 30 Days | 150 TK / 60 Days",
-          "features": ["Speed: 25 Mbps", "Ping (PUBG/FF): 20/30 ms", "BW Limit: 50 GB", "Protocol: vless", "Stock: 5"]
+          "name": "Streamer",
+          "price": "120 TK / 30 Days | 200 TK / 60 Days",
+          "features": [
+            "Speed: 25 Mbps",
+            "Bandwidth: 50 GB",
+            "PUBG/FF Ping: 20-30 ms",
+            "Protocol: VLESS + SNI",
+            "Server: Bangladesh (BDIX)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🔥 CATEGORY 3: COMBO (Gaming + Daily)",
+      "themeColor": "#f59e0b",
+      "packages": [
+        {
+          "name": "Standard Combo",
+          "price": "90 TK / 30 Days | 170 TK / 60 Days",
+          "features": [
+            "Speed: 20 Mbps",
+            "Bandwidth: 100 GB",
+            "PUBG/FF Ping: 20-30 ms",
+            "Protocol: VLESS + SNI",
+            "Server: Bangladesh (BDIX)"
+          ]
+        },
+        {
+          "name": "Heavy Combo",
+          "price": "150 TK / 30 Days | 270 TK / 60 Days",
+          "features": [
+            "Speed: 50 Mbps",
+            "Bandwidth: 250 GB",
+            "PUBG/FF Ping: 20-30 ms",
+            "Protocol: VLESS + SNI",
+            "Server: Bangladesh (BDIX)"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "🔓 CATEGORY 4: CGNAT BYPASS (WireGuard)",
+      "themeColor": "#8b5cf6",
+      "packages": [
+        {
+          "name": "Advanced",
+          "price": "150 TK / 30 Days | 280 TK / 60 Days",
+          "features": [
+            "Speed: 200 Mbps",
+            "Bandwidth: Unlimited",
+            "Custom Ports: 50 Public Ports",
+            "IP Setup: IPv4 Only",
+            "Protocol: WireGuard"
+          ]
+        },
+        {
+          "name": "Ultimate",
+          "price": "250 TK / 30 Days | 450 TK / 60 Days",
+          "features": [
+            "Speed: 500 Mbps",
+            "Bandwidth: Unlimited",
+            "Custom Ports: 100 Public Ports",
+            "IP Setup: IPv4 + IPv6",
+            "Protocol: WireGuard"
+          ]
+        }
         }
       ]
     }
