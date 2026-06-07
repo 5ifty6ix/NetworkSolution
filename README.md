@@ -1,16 +1,27 @@
 # 5ifty6ix Network Solution 🌐
 
-Welcome to the official repository for the **5ifty6ix Network Solution** pricing page. This static website serves as a lightweight, clean, and accessible catalog for our network packages.
+Welcome to the official repository for the **5ifty6ix Network Solution** website. This lightweight, high-performance static website serves as a modern catalog for our premium network bypass, gaming, and CGNAT solutions.
 
-## Our Services
+## 🔗 Live Website
+**[Visit the Live Pricing Page](https://5ifty6ix.github.io/NetworkSolution)**
 
-**📱 SIM Bypass Packages (Categories 1-3)**
-Designed for everyday users and gamers. By utilizing custom **VLESS + SNI** protocols, we help users bypass restrictions on carrier-specific social, OTT, and streaming packs, unlocking full, high-speed internet access.
+## 🚀 Features
+* **Dynamic Pricing Catalog:** Prices, categories, and packages are loaded automatically from a structured JSON file.
+* **Premium Dark UI:** Designed with a modern, cyberpunk-inspired dark theme, featuring glowing typography and sleek hover animations.
+* **WhatsApp Business Integration:** The ordering system uses the WhatsApp API to dynamically generate pre-filled messages containing the customer's exact selected package details.
+* **Fully Responsive:** Optimized for a seamless experience on both mobile and desktop browsers.
 
-**🔒 Advanced CGNAT Bypass (Category 4)**
-Built for advanced users who need unrestricted inbound routing. These premium **WireGuard** packages provide dedicated IPv4/IPv6 addresses and custom public ports to seamlessly bypass ISP Carrier-Grade NAT (CGNAT).
+## 📂 Project Structure
+* `index.html`: The core website file containing the HTML structure, CSS styling, and JavaScript fetching logic.
+* `data.json`: The database file holding all category titles, package names, features, and pricing.
 
-## How to Order
-To keep things simple and secure, all payments, technical support, and package deliveries are handled directly via private inbox. 
+## 🛠️ How to Update Packages
+To update the website's inventory or pricing, you **do not** need to edit the HTML. 
 
-Check out the live pricing page here: [Insert Your GitHub Pages Link]
+1. Open the `data.json` file in this repository.
+2. Edit the text for any `"name"`, `"price"`, or `"features"`. 
+3. Commit your changes. 
+4. The live website will automatically sync and update the new prices within a few minutes.
+
+## 📞 Support
+For automated network setup, technical assistance, or general inquiries, contact our 24/7 professional support directly through our WhatsApp Business line linked on the website.
