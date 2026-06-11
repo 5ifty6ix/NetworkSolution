@@ -1,12 +1,16 @@
 {
+  "lastUpdated": "2026-06-12",
+  "currency": "BDT",
   "categories": [
     {
       "title": "📱 CATEGORY 1: DAILY USAGE",
       "themeColor": "#38bdf8",
+      "description": "Everyday browsing, streaming, and downloads",
       "packages": [
         {
           "name": "Lite",
           "price": "60 TK / 30 Days",
+          "popular": false,
           "features": [
             "Speed: 40 Mbps",
             "Bandwidth: 500 GB",
@@ -18,6 +22,7 @@
         {
           "name": "Max",
           "price": "100 TK / 30 Days",
+          "popular": true,
           "features": [
             "Speed: 100 Mbps",
             "Bandwidth: Unlimited",
@@ -31,10 +36,12 @@
     {
       "title": "🎮 CATEGORY 2: E-SPORTS GAMING",
       "themeColor": "#10b981",
+      "description": "Ultra-low latency for competitive gaming",
       "packages": [
         {
           "name": "Mobile Gamer",
           "price": "70 TK / 30 Days",
+          "popular": false,
           "features": [
             "Speed: 10 Mbps",
             "Bandwidth: 20 GB",
@@ -46,6 +53,7 @@
         {
           "name": "Streamer",
           "price": "120 TK / 30 Days",
+          "popular": true,
           "features": [
             "Speed: 25 Mbps",
             "Bandwidth: 50 GB",
@@ -59,10 +67,12 @@
     {
       "title": "🔥 CATEGORY 3: COMBO (Gaming + Daily)",
       "themeColor": "#f59e0b",
+      "description": "Best of both worlds — game and browse",
       "packages": [
         {
           "name": "Standard Combo",
           "price": "90 TK / 30 Days",
+          "popular": false,
           "features": [
             "Speed: 20 Mbps",
             "Bandwidth: 100 GB",
@@ -74,6 +84,7 @@
         {
           "name": "Heavy Combo",
           "price": "150 TK / 30 Days",
+          "popular": true,
           "features": [
             "Speed: 50 Mbps",
             "Bandwidth: 250 GB",
@@ -87,10 +98,12 @@
     {
       "title": "🔓 CATEGORY 4: CGNAT BYPASS (WireGuard)",
       "themeColor": "#8b5cf6",
+      "description": "Public IP ports with WireGuard tunneling",
       "packages": [
         {
           "name": "Advanced",
           "price": "150 TK / 30 Days",
+          "popular": false,
           "features": [
             "Speed: 200 Mbps",
             "Bandwidth: Unlimited",
@@ -102,6 +115,7 @@
         {
           "name": "Ultimate",
           "price": "250 TK / 30 Days",
+          "popular": true,
           "features": [
             "Speed: 500 Mbps",
             "Bandwidth: Unlimited",
