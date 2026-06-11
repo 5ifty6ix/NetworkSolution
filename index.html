@@ -3,248 +3,691 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>5ifty6ix Network Solution</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>5ifty6ix Network Solution — Premium Network Bypass</title>
+    <meta name="description" content="Premium network restriction bypass services with VLESS, WireGuard & SNI protocols. High-speed routing, ultra-low ping gaming, and 24/7 WhatsApp support.">
+    <meta name="keywords" content="network bypass, VLESS, WireGuard, CGNAT bypass, gaming VPN, low ping, BDIX, Bangladesh">
+    <meta name="author" content="5ifty6ix Network Solution">
+    <meta property="og:title" content="5ifty6ix Network Solution — Premium Network Bypass">
+    <meta property="og:description" content="High-speed network restriction bypass with VLESS & WireGuard. Gaming-optimized low-ping servers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://5ifty6ix.github.io">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* ===== RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; scroll-padding-top: 80px; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: #000000;
             color: #a3a3a3;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
+            line-height: 1.7;
+            overflow-x: hidden;
         }
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-family: 'Orbitron', sans-serif;
             color: #ffffff;
             text-transform: uppercase;
         }
-        .glow-text {
-            text-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 20px rgba(255,255,255,0.2);
-            letter-spacing: 2px;
+        a { text-decoration: none; color: inherit; }
+        img { max-width: 100%; display: block; }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #444; }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(0,0,0,0.75); backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            transition: all 0.3s;
         }
+        .navbar.scrolled { background: rgba(0,0,0,0.92); border-bottom-color: rgba(255,255,255,0.1); }
+        .nav-inner {
+            max-width: 1100px; margin: 0 auto; padding: 0 24px;
+            display: flex; align-items: center; justify-content: space-between; height: 64px;
+        }
+        .nav-logo {
+            font-family: 'Orbitron', sans-serif; font-weight: 800; font-size: 1.25rem;
+            color: #fff; letter-spacing: 1px; display: flex; align-items: center; gap: 8px;
+        }
+        .nav-logo .logo-dot {
+            width: 8px; height: 8px; background: #fff; border-radius: 50%;
+            box-shadow: 0 0 10px #fff, 0 0 20px rgba(255,255,255,0.5);
+        }
+        .nav-links { display: flex; list-style: none; gap: 32px; align-items: center; }
+        .nav-links a {
+            color: #999; font-size: 0.875rem; font-weight: 500; transition: color 0.25s;
+            position: relative; letter-spacing: 0.5px;
+        }
+        .nav-links a:hover, .nav-links a.active { color: #fff; }
+        .nav-links a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px;
+            background: #fff; transition: width 0.3s;
+        }
+        .nav-links a:hover::after { width: 100%; }
+        .nav-cta {
+            background: #fff; color: #000 !important; padding: 8px 18px; border-radius: 6px;
+            font-weight: 600 !important; transition: all 0.3s !important;
+        }
+        .nav-cta:hover { background: #ccc; box-shadow: 0 0 20px rgba(255,255,255,0.15); }
+        .nav-cta::after { display: none !important; }
+        .hamburger {
+            display: none; flex-direction: column; gap: 5px; cursor: pointer;
+            background: none; border: none; padding: 4px; z-index: 1001;
+        }
+        .hamburger span {
+            width: 26px; height: 2px; background: #fff; border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+        .hamburger.open span:nth-child(2) { opacity: 0; }
+        .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+
+        /* ===== HERO ===== */
         .hero {
-            text-align: center;
-            padding: 100px 20px 60px 20px;
-            background: radial-gradient(circle at center, #111 0%, #000 70%);
+            position: relative; text-align: center;
+            padding: 140px 20px 100px 20px;
+            background: radial-gradient(circle at 50% 30%, #0d0d0d 0%, #000 70%);
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 60px 60px;
+            mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
+            -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
+        }
+        .hero .hero-badge {
+            display: inline-block; padding: 6px 16px; border: 1px solid #222;
+            border-radius: 20px; font-size: 0.8rem; color: #aaa; margin-bottom: 28px;
+            letter-spacing: 2px; font-family: 'Orbitron', sans-serif; position: relative;
+            animation: fadeInDown 0.8s ease;
         }
         .hero h1 {
-            font-size: 3.5em;
-            margin: 0;
-            font-weight: 900;
+            font-size: clamp(2.2rem, 6vw, 4.2rem);
+            margin: 0; font-weight: 900; line-height: 1.1; position: relative;
+            animation: fadeInUp 0.8s ease;
         }
-        .hero p {
-            font-size: 1.2em;
-            max-width: 600px;
-            margin: 20px auto;
-            color: #888;
+        .glow-text {
+            text-shadow: 0 0 10px rgba(255,255,255,0.5), 0 0 30px rgba(255,255,255,0.2), 0 0 60px rgba(255,255,255,0.08);
+            letter-spacing: 3px;
+        }
+        .hero .hero-subtitle {
+            font-size: 1.1rem; max-width: 560px; margin: 20px auto 0;
+            color: #777; position: relative; animation: fadeInUp 0.8s ease 0.15s both;
         }
         .hero-buttons {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            gap: 15px;
+            margin-top: 36px; display: flex; justify-content: center; gap: 16px;
+            flex-wrap: wrap; position: relative; animation: fadeInUp 0.8s ease 0.3s both;
         }
+
+        /* ===== BUTTONS ===== */
         .btn-primary {
-            background-color: #ffffff;
-            color: #000000;
-            padding: 12px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
+            background-color: #ffffff; color: #000000;
+            padding: 14px 32px; border-radius: 10px;
+            font-weight: 600; font-size: 0.95rem;
+            transition: all 0.3s; display: inline-block; letter-spacing: 0.5px;
         }
-        .btn-primary:hover {
-            background-color: #cccccc;
-            box-shadow: 0 0 15px rgba(255,255,255,0.3);
-        }
+        .btn-primary:hover { background-color: #d4d4d4; box-shadow: 0 0 25px rgba(255,255,255,0.25); transform: translateY(-2px); }
         .btn-outline {
-            background-color: transparent;
-            color: #ffffff;
-            border: 1px solid #333;
-            padding: 12px 30px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
+            background: transparent; color: #ffffff;
+            border: 1px solid #2a2a2a; padding: 14px 32px;
+            border-radius: 10px; font-weight: 600; font-size: 0.95rem;
+            transition: all 0.3s; display: inline-block; letter-spacing: 0.5px;
         }
-        .btn-outline:hover {
-            border-color: #fff;
-            box-shadow: 0 0 15px rgba(255,255,255,0.1);
+        .btn-outline:hover { border-color: #fff; box-shadow: 0 0 20px rgba(255,255,255,0.08); transform: translateY(-2px); }
+        .btn-accent {
+            background: linear-gradient(135deg, #38bdf8, #8b5cf6);
+            color: #fff; padding: 14px 32px; border-radius: 10px;
+            font-weight: 600; font-size: 0.95rem;
+            transition: all 0.3s; display: inline-block; letter-spacing: 0.5px;
         }
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
+        .btn-accent:hover { box-shadow: 0 0 30px rgba(139,92,246,0.3); transform: translateY(-2px); }
+
+        /* ===== CONTAINER ===== */
+        .container { max-width: 1050px; margin: 0 auto; padding: 60px 24px; }
+
+        /* ===== SECTION TITLE ===== */
         .section-title {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 40px;
-            margin-top: 60px;
+            text-align: center; font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin-bottom: 16px; position: relative;
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+        .section-subtitle {
+            text-align: center; color: #666; font-size: 0.95rem;
+            max-width: 500px; margin: 0 auto 48px;
         }
+
+        /* ===== STATS ===== */
+        .stats-bar {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 24px; max-width: 800px; margin: 0 auto 60px; text-align: center;
+        }
+        .stat-item .stat-number {
+            font-family: 'Orbitron', sans-serif; font-size: 2.2rem; font-weight: 700;
+            color: #fff; display: block; line-height: 1;
+        }
+        .stat-item .stat-label { font-size: 0.8rem; color: #666; margin-top: 6px; letter-spacing: 1px; }
+
+        /* ===== GRID & CARDS ===== */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
         .card {
-            background-color: #0a0a0a;
-            border: 1px solid #1a1a1a;
-            border-radius: 16px;
-            padding: 30px;
-            transition: transform 0.3s, border-color 0.3s;
+            background-color: #060606; border: 1px solid #141414;
+            border-radius: 18px; padding: 32px 28px;
+            transition: all 0.35s cubic-bezier(0.4,0,0.2,1); position: relative; overflow: hidden;
         }
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: #333;
-            box-shadow: 0 10px 30px rgba(255,255,255,0.02);
+        .card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+            opacity: 0; transition: opacity 0.35s;
         }
-        .card h3 {
-            font-size: 1.3em;
-            margin-top: 0;
-            letter-spacing: 1px;
+        .card:hover { transform: translateY(-6px); border-color: #222; box-shadow: 0 20px 50px rgba(0,0,0,0.5); }
+        .card:hover::before { opacity: 1; }
+        .card-icon {
+            width: 48px; height: 48px; border-radius: 12px; display: flex;
+            align-items: center; justify-content: center; font-size: 1.5rem;
+            margin-bottom: 20px; background: #0d0d0d; border: 1px solid #1a1a1a;
         }
+        .card h3 { font-size: 1.15rem; margin: 0 0 10px; letter-spacing: 0.5px; }
+        .card p { font-size: 0.9rem; color: #777; line-height: 1.6; }
+
+        /* ===== PRICING CARDS ===== */
         .price-badge {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 1.2em;
-            color: #fff;
-            margin: 15px 0;
-            padding-bottom: 15px;
-            border-bottom: 1px solid #1a1a1a;
+            font-family: 'Orbitron', sans-serif; font-size: 1.15rem; color: #fff;
+            margin: 16px 0; padding-bottom: 16px; border-bottom: 1px solid #141414;
+            letter-spacing: 0.5px;
         }
-        .features-list {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 25px 0;
-        }
+        .features-list { list-style: none; padding: 0; margin: 0 0 24px 0; }
         .features-list li {
-            padding: 8px 0;
-            font-size: 0.9em;
-            display: flex;
-            justify-content: space-between;
-            border-bottom: 1px solid #111;
+            padding: 9px 0; font-size: 0.88rem; display: flex;
+            justify-content: space-between; border-bottom: 1px solid #0d0d0d;
         }
-        .features-list li span:first-child {
-            color: #666;
-        }
-        .features-list li span:last-child {
-            color: #eee;
-            font-weight: 500;
-        }
-        details {
-            background-color: #0a0a0a;
-            border: 1px solid #1a1a1a;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            padding: 15px 20px;
-        }
-        summary {
-            color: #fff;
-            font-weight: 500;
-            cursor: pointer;
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-        }
-        summary::-webkit-details-marker {
-            display: none;
-        }
-        summary::after {
-            content: '+';
-            color: #666;
-            font-size: 1.2em;
-        }
-        details[open] summary::after {
-            content: '-';
-        }
-        details p {
-            margin-top: 15px;
-            color: #888;
-            font-size: 0.9em;
-        }
+        .features-list li span:first-child { color: #555; }
+        .features-list li span:last-child { color: #ddd; font-weight: 500; }
         .cat-title {
-            color: #fff;
-            font-size: 1.5em;
-            margin-top: 50px;
-            margin-bottom: 20px;
-            padding-left: 10px;
-            border-left: 3px solid #fff;
+            color: #fff; font-size: 1.4rem; margin-top: 56px; margin-bottom: 24px;
+            padding-left: 14px; border-left: 4px solid #fff; letter-spacing: 1px;
+        }
+        .popular-badge {
+            position: absolute; top: 16px; right: 16px;
+            background: linear-gradient(135deg, #f59e0b, #ef4444);
+            color: #000; font-size: 0.7rem; font-weight: 700; padding: 4px 10px;
+            border-radius: 20px; letter-spacing: 1px; font-family: 'Orbitron', sans-serif;
+        }
+
+        /* ===== SKELETON LOADING ===== */
+        .skeleton-card {
+            background: #060606; border: 1px solid #141414; border-radius: 18px;
+            padding: 32px 28px; animation: pulse 1.5s infinite;
+        }
+        .skeleton-line {
+            background: #111; border-radius: 6px; height: 14px; margin-bottom: 12px;
+        }
+        .skeleton-line.short { width: 60%; }
+        .skeleton-line.medium { width: 80%; }
+        .skeleton-line.long { width: 100%; }
+        .skeleton-title { height: 22px; width: 50%; margin-bottom: 20px; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+        /* ===== HOW IT WORKS ===== */
+        .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; }
+        .step-item { text-align: center; position: relative; }
+        .step-number {
+            width: 56px; height: 56px; border-radius: 50%; background: #fff;
+            color: #000; display: flex; align-items: center; justify-content: center;
+            font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 1.3rem;
+            margin: 0 auto 20px; box-shadow: 0 0 30px rgba(255,255,255,0.1);
+        }
+        .step-item h4 { font-size: 1rem; margin-bottom: 8px; letter-spacing: 0.5px; }
+        .step-item p { font-size: 0.85rem; color: #666; }
+        .step-arrow {
+            position: absolute; top: 20px; right: -20px; font-size: 1.5rem; color: #222;
+        }
+
+        /* ===== FAQ ===== */
+        details {
+            background-color: #060606; border: 1px solid #141414;
+            border-radius: 14px; margin-bottom: 12px; padding: 18px 22px;
+            transition: all 0.25s; cursor: pointer;
+        }
+        details:hover { border-color: #222; }
+        details[open] { border-color: #2a2a2a; background: #080808; }
+        summary {
+            color: #fff; font-weight: 500; cursor: pointer; list-style: none;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.95rem; letter-spacing: 0.3px;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '+'; color: #555; font-size: 1.3rem; font-weight: 300;
+            transition: transform 0.3s; min-width: 24px; text-align: center;
+        }
+        details[open] summary::after { content: '−'; transform: rotate(180deg); }
+        details .faq-answer {
+            margin-top: 14px; color: #888; font-size: 0.88rem; line-height: 1.7;
+            animation: fadeIn 0.3s ease;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            text-align: center; padding: 60px 24px;
+            background: radial-gradient(ellipse at center, #0a0a0a 0%, #000 70%);
+            border-top: 1px solid #111; border-bottom: 1px solid #111;
+        }
+        .cta-section h2 { font-size: clamp(1.6rem, 3.5vw, 2.2rem); margin-bottom: 12px; }
+        .cta-section p { color: #666; max-width: 480px; margin: 0 auto 28px; }
+
+        /* ===== FOOTER ===== */
+        .site-footer {
+            padding: 48px 24px 32px; border-top: 1px solid #111;
+            max-width: 1050px; margin: 0 auto;
+        }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 32px; margin-bottom: 36px; }
+        .footer-col h4 { font-size: 0.85rem; margin-bottom: 14px; letter-spacing: 1px; color: #fff; }
+        .footer-col a, .footer-col p { font-size: 0.83rem; color: #666; display: block; margin-bottom: 8px; transition: color 0.2s; }
+        .footer-col a:hover { color: #ccc; }
+        .footer-bottom { text-align: center; padding-top: 24px; border-top: 1px solid #0d0d0d; }
+        .footer-bottom p { font-size: 0.78rem; color: #444; }
+
+        /* ===== SCROLL TO TOP ===== */
+        .scroll-top {
+            position: fixed; bottom: 28px; right: 28px; z-index: 999;
+            width: 44px; height: 44px; border-radius: 50%;
+            background: #fff; color: #000; border: none; cursor: pointer;
+            font-size: 1.2rem; display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transform: translateY(10px);
+            transition: all 0.3s; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .scroll-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+        .scroll-top:hover { background: #e0e0e0; transform: translateY(-3px); }
+
+        /* ===== FLOATING WA ===== */
+        .floating-wa {
+            position: fixed; bottom: 28px; left: 28px; z-index: 999;
+            width: 50px; height: 50px; border-radius: 50%;
+            background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; box-shadow: 0 4px 24px rgba(37,211,102,0.3);
+            transition: all 0.3s; animation: bounce 2s infinite;
+        }
+        .floating-wa:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.4); }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.4,0,0.2,1); }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links {
+                position: fixed; top: 0; right: -100%; width: 75%; max-width: 320px;
+                height: 100vh; background: #050505; flex-direction: column;
+                padding: 80px 32px 32px; gap: 24px; transition: right 0.35s ease;
+                border-left: 1px solid #141414; align-items: flex-start;
+            }
+            .nav-links.open { right: 0; }
+            .navbar { background: rgba(0,0,0,0.9); }
+            .hero { padding: 120px 20px 70px; }
+            .step-arrow { display: none; }
+            .floating-wa { bottom: 20px; left: 20px; width: 44px; height: 44px; font-size: 1.3rem; }
+            .scroll-top { bottom: 20px; right: 20px; width: 40px; height: 40px; }
+        }
+        @media (max-width: 480px) {
+            .hero h1 { font-size: 1.8rem; }
+            .hero-buttons { flex-direction: column; align-items: center; }
+            .hero-buttons a { width: 80%; text-align: center; }
+            .grid { grid-template-columns: 1fr; }
+            .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 16px; }
         }
     </style>
 </head>
 <body>
-    <div class="hero">
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <span class="logo-dot"></span> 5ifty6ix
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="https://wa.me/8801605696443" class="nav-cta" id="navCta">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-badge">🔒 SECURE · FAST · RELIABLE</div>
         <h1 class="glow-text">PREMIUM<br>NETWORK BYPASS<br>SOLUTIONS</h1>
-        <p>সর্বোচ্চ মানের নেটওয়ার্ক রেস্ট্রিকশন বাইপাস সার্ভিস</p>
+        <p class="hero-subtitle">সর্বোচ্চ মানের নেটওয়ার্ক রেস্ট্রিকশন বাইপাস সার্ভিস — VLESS, WireGuard & Custom SNI protocols optimized for Bangladesh.</p>
         <div class="hero-buttons">
-            <a href="#pricing" class="btn-primary">View Pricing</a>
-            <a href="https://wa.me/8801605696443" class="btn-outline" id="hero-support-btn">Contact Support</a>
+            <a href="#pricing" class="btn-primary">📦 View Pricing</a>
+            <a href="https://wa.me/8801605696443" class="btn-outline" id="heroSupportBtn">💬 Contact Support</a>
         </div>
-    </div>
-    <div class="container">
-        <h2 class="section-title glow-text">Key Features</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>⚡ High-Speed Routing</h3>
-                <p>Enjoy blazing fast speeds with our optimized routing protocols, specifically tailored for daily use and heavy streaming.</p>
-            </div>
-            <div class="card">
-                <h3>🎮 Ultra-Low Ping</h3>
-                <p>Dedicated premium gaming lines designed to reduce latency for PUBG, Free Fire, and competitive mobile gaming.</p>
-            </div>
-            <div class="card">
-                <h3>📱 All Device Support</h3>
-                <p>Seamlessly connect on any platform. Our protocols are fully compatible with Android, iOS, Windows, and macOS.</p>
-            </div>
-            <div class="card">
-                <h3>🎧 24/7 Support</h3>
-                <p>Round the clock technical assistance directly via WhatsApp. We are always here to resolve your network issues instantly.</p>
+    </section>
+
+    <main>
+
+        <!-- ===== STATS ===== -->
+        <div class="container reveal" style="padding-bottom:20px;">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="1500">0</span>
+                    <span class="stat-label">Happy Customers</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">99.9<span style="font-size:0.6em;">%</span></span>
+                    <span class="stat-label">Uptime Guarantee</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">24/7</span>
+                    <span class="stat-label">Support Available</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Protocol Options</span>
+                </div>
             </div>
         </div>
-        <h2 id="pricing" class="section-title glow-text">Pricing Plans</h2>
-        <div id="pricing-container">
-            <p style="text-align: center;">Loading packages...</p>
+
+        <!-- ===== FEATURES ===== -->
+        <div class="container reveal" id="features">
+            <h2 class="section-title glow-text">Key Features</h2>
+            <p class="section-subtitle">Engineered for performance, built for reliability</p>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>High-Speed Routing</h3>
+                    <p>Blazing fast speeds up to 500 Mbps with our optimized routing protocols — perfect for streaming, downloads, and daily use.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎮</div>
+                    <h3>Ultra-Low Ping Gaming</h3>
+                    <p>Dedicated BDIX gaming lines delivering 20-30ms ping for PUBG, Free Fire, and competitive mobile gaming.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>All Device Support</h3>
+                    <p>Full compatibility with Android, iOS, Windows, and macOS. One configuration works seamlessly across all your devices.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>CGNAT Bypass</h3>
+                    <p>Advanced WireGuard tunnels with custom public ports to bypass ISP-level CGNAT restrictions. IPv4 + IPv6 support.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🎧</div>
+                    <h3>24/7 WhatsApp Support</h3>
+                    <p>Round-the-clock technical assistance. Get instant setup help, troubleshooting, and package recommendations anytime.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔐</div>
+                    <h3>Encrypted & Secure</h3>
+                    <p>Military-grade encryption with VLESS + custom SNI configurations. Your data stays private and protected at all times.</p>
+                </div>
+            </div>
         </div>
-        <h2 class="section-title glow-text">Frequently Asked Questions</h2>
-        <details>
-            <summary>What protocols do you support?</summary>
-            <p>We primarily utilize custom VLESS + SNI configurations for our standard and gaming packages, and WireGuard for our advanced ISP CGNAT bypass packages.</p>
-        </details>
-        <details>
-            <summary>How do I receive my package after payment?</summary>
-            <p>All transactions, setup instructions, and file deliveries are handled securely and directly through our WhatsApp Business account to ensure you get personalized support.</p>
-        </details>
-        <details>
-            <summary>Is there a device limit?</summary>
-            <p>Please contact our support regarding simultaneous connections, as limits may vary based on whether you are using a daily, heavy, or CGNAT bypass package.</p>
-        </details>
-    </div>
+
+        <!-- ===== HOW IT WORKS ===== -->
+        <div class="container reveal" id="how-it-works">
+            <h2 class="section-title glow-text">How It Works</h2>
+            <p class="section-subtitle">Get connected in 4 simple steps</p>
+            <div class="steps">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h4>Choose a Package</h4>
+                    <p>Browse our pricing plans and pick the one that fits your needs — Daily, Gaming, Combo, or CGNAT Bypass.</p>
+                </div>
+                <div class="step-item" style="position:relative;">
+                    <span class="step-arrow">→</span>
+                    <div class="step-number">2</div>
+                    <h4>Contact on WhatsApp</h4>
+                    <p>Click "Get Started" on any package. You'll be redirected to WhatsApp with your package details pre-filled.</p>
+                </div>
+                <div class="step-item" style="position:relative;">
+                    <span class="step-arrow">→</span>
+                    <div class="step-number">3</div>
+                    <h4>Complete Payment</h4>
+                    <p>Pay via Bkash, Nagad, or Rocket. We'll confirm your payment instantly and prepare your configuration.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h4>Get Connected</h4>
+                    <p>Receive your config file via WhatsApp. Import it and enjoy unrestricted, high-speed internet immediately!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== PRICING ===== -->
+        <div class="container reveal" id="pricing">
+            <h2 class="section-title glow-text">Pricing Plans</h2>
+            <p class="section-subtitle">Flexible packages for every need</p>
+            <div id="pricing-container">
+                <!-- Skeleton Loading -->
+                <div id="skeleton-grid" class="grid">
+                    <div class="skeleton-card"><div class="skeleton-line skeleton-title"></div><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line long"></div></div>
+                    <div class="skeleton-card"><div class="skeleton-line skeleton-title"></div><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line long"></div></div>
+                    <div class="skeleton-card"><div class="skeleton-line skeleton-title"></div><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line long"></div></div>
+                    <div class="skeleton-card"><div class="skeleton-line skeleton-title"></div><div class="skeleton-line short"></div><div class="skeleton-line medium"></div><div class="skeleton-line long"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== FAQ ===== -->
+        <div class="container reveal" id="faq">
+            <h2 class="section-title glow-text">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know</p>
+            <details>
+                <summary>What protocols do you support?</summary>
+                <div class="faq-answer">We primarily use <strong>custom VLESS + SNI</strong> configurations for our standard and gaming packages. For CGNAT bypass packages, we deploy <strong>WireGuard</strong> tunnels with custom public port allocation. Each protocol is optimized for its specific use case.</div>
+            </details>
+            <details>
+                <summary>How do I receive my package after payment?</summary>
+                <div class="faq-answer">All transactions, configuration files, and setup instructions are delivered directly through our <strong>WhatsApp Business</strong> account. Once payment is confirmed, you'll receive your personalized config file with step-by-step setup guidance.</div>
+            </details>
+            <details>
+                <summary>Is there a device limit?</summary>
+                <div class="faq-answer">Device limits vary by package type. Daily packages typically allow <strong>1-2 simultaneous connections</strong>, while CGNAT bypass packages can support more. Contact our support team for specific limits on your chosen package.</div>
+            </details>
+            <details>
+                <summary>What payment methods do you accept?</summary>
+                <div class="faq-answer">We accept <strong>Bkash, Nagad, and Rocket</strong> mobile banking. All payments are processed manually with instant confirmation during business hours. We'll provide payment details when you contact us on WhatsApp.</div>
+            </details>
+            <details>
+                <summary>Can I upgrade or downgrade my package?</summary>
+                <div class="faq-answer">Absolutely! You can switch packages at any time by contacting us on WhatsApp. We'll prorate the difference and issue a new configuration file for your updated plan.</div>
+            </details>
+            <details>
+                <summary>What is CGNAT bypass and do I need it?</summary>
+                <div class="faq-answer">CGNAT (Carrier-Grade NAT) is used by many ISPs in Bangladesh, which can limit port forwarding and certain types of connections. Our <strong>WireGuard CGNAT Bypass</strong> packages give you public IPv4/IPv6 ports, enabling direct connections for gaming, hosting, and more.</div>
+            </details>
+            <details>
+                <summary>How long does setup take?</summary>
+                <div class="faq-answer">Setup is <strong>instant</strong>! After payment confirmation, you'll receive your config file within minutes. Importing it takes less than 30 seconds on any device. We also provide video guides if needed.</div>
+            </details>
+        </div>
+
+        <!-- ===== CTA ===== -->
+        <div class="cta-section reveal">
+            <h2 class="glow-text">Ready to Get Started?</h2>
+            <p>Join 1,500+ satisfied customers enjoying unrestricted internet. Pick your package and message us on WhatsApp today.</p>
+            <a href="https://wa.me/8801605696443?text=Hi!%20I'm%20interested%20in%20your%20network%20bypass%20services.%20Can%20you%20help%20me%20choose%20a%20package%3F" class="btn-accent" target="_blank" rel="noopener noreferrer">💬 Message on WhatsApp</a>
+        </div>
+
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="site-footer reveal">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>5ifty6ix Network</h4>
+                <p>Premium network bypass solutions for Bangladesh. Fast, secure, and reliable connectivity since 2024.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#how-it-works">How It Works</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <div class="footer-col">
+                <h4>Protocols</h4>
+                <a href="#pricing">VLESS + SNI</a>
+                <a href="#pricing">WireGuard</a>
+                <a href="#pricing">CGNAT Bypass</a>
+                <a href="#pricing">BDIX Gaming</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <a href="https://wa.me/8801605696443">WhatsApp: +880 1605-696443</a>
+                <p>Available 24/7</p>
+                <p>Bangladesh</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024–2026 5ifty6ix Network Solution. All rights reserved. Built with ⚡ for speed.</p>
+        </div>
+    </footer>
+
+    <!-- ===== SCROLL TO TOP ===== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">↑</button>
+
+    <!-- ===== FLOATING WHATSAPP ===== -->
+    <a href="https://wa.me/8801605696443" class="floating-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">💬</a>
+
+    <!-- ===== SCRIPTS ===== -->
     <script>
-        const whatsappNumber = "8801605696443"; 
-        document.getElementById('hero-support-btn').href = `https://wa.me/${whatsappNumber}`;
+        const whatsappNumber = "8801605696443";
+
+        // --- Update hero & nav WhatsApp links ---
+        document.getElementById('heroSupportBtn').href = `https://wa.me/${whatsappNumber}`;
+        document.getElementById('navCta').href = `https://wa.me/${whatsappNumber}`;
+
+        // --- NAVIGATION: sticky shadow & mobile menu ---
+        const navbar = document.getElementById('navbar');
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        const allNavLinks = navLinks.querySelectorAll('a');
+
+        window.addEventListener('scroll', () => {
+            navbar.classList.toggle('scrolled', window.scrollY > 20);
+        });
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            navLinks.classList.toggle('open');
+        });
+
+        allNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('open');
+                navLinks.classList.remove('open');
+            });
+        });
+
+        // --- SCROLL TO TOP ---
+        const scrollTopBtn = document.getElementById('scrollTop');
+        window.addEventListener('scroll', () => {
+            scrollTopBtn.classList.toggle('visible', window.scrollY > 500);
+        });
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // --- SCROLL REVEAL ANIMATIONS ---
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+        revealElements.forEach(el => observer.observe(el));
+
+        // --- COUNTER ANIMATION ---
+        const statNumbers = document.querySelectorAll('.stat-number[data-count]');
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const el = entry.target;
+                    const target = parseInt(el.getAttribute('data-count'));
+                    const duration = 2000;
+                    const start = performance.now();
+                    function update(now) {
+                        const elapsed = now - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const ease = 1 - Math.pow(1 - progress, 3);
+                        el.textContent = Math.floor(ease * target) + '+';
+                        if (progress < 1) requestAnimationFrame(update);
+                    }
+                    requestAnimationFrame(update);
+                    counterObserver.unobserve(el);
+                }
+            });
+        }, { threshold: 0.5 });
+        statNumbers.forEach(el => counterObserver.observe(el));
+
+        // --- LOAD PRICING FROM data.json ---
         const fetchUrl = 'data.json?v=' + new Date().getTime();
         fetch(fetchUrl)
             .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
+                if (!response.ok) throw new Error('Network response was not ok');
                 return response.json();
             })
             .then(data => {
                 const container = document.getElementById('pricing-container');
-                container.innerHTML = ''; 
+                const skeleton = document.getElementById('skeleton-grid');
+                if (skeleton) skeleton.remove();
+                container.innerHTML = '';
+
                 data.categories.forEach(category => {
+                    // Category title
                     const title = document.createElement('h3');
                     title.className = 'cat-title';
                     title.textContent = category.title;
-                    title.style.borderLeftColor = category.themeColor; 
+                    title.style.borderLeftColor = category.themeColor;
                     container.appendChild(title);
+
+                    // Package grid
                     const grid = document.createElement('div');
                     grid.className = 'grid';
+
                     category.packages.forEach(pkg => {
                         const card = document.createElement('div');
                         card.className = 'card';
+                        card.style.position = 'relative';
+
+                        // Popular badge
+                        if (pkg.popular) {
+                            const badge = document.createElement('span');
+                            badge.className = 'popular-badge';
+                            badge.textContent = '🔥 POPULAR';
+                            card.appendChild(badge);
+                        }
+
+                        // Features HTML
                         const featuresHTML = pkg.features.map(f => {
                             const splitIndex = f.indexOf(':');
                             if (splitIndex > -1) {
@@ -254,28 +697,49 @@
                             }
                             return `<li><span>${f}</span><span>✓</span></li>`;
                         }).join('');
+
+                        // WhatsApp message
                         const featuresListForWa = pkg.features.map(f => `• ${f}`).join('\n');
                         const textMessage = `Hi! I'm interested in getting a new package:\n\n*${category.title}*\nPackage: *${pkg.name}*\nPrice: *${pkg.price}*\n\n*Details:*\n${featuresListForWa}\n\nCan you help me set this up?`;
                         const encodedMessage = encodeURIComponent(textMessage);
                         const waLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-                        card.innerHTML = `
+
+                        card.innerHTML += `
                             <h3 style="color: ${category.themeColor}">${pkg.name}</h3>
                             <div class="price-badge">${pkg.price}</div>
-                            <ul class="features-list">
-                                ${featuresHTML}
-                            </ul>
-                            <a href="${waLink}" target="_blank" rel="noopener noreferrer" class="btn-primary" style="display: block; text-align: center; margin-top: 20px;">Get Started</a>
+                            <ul class="features-list">${featuresHTML}</ul>
+                            <a href="${waLink}" target="_blank" rel="noopener noreferrer"
+                               class="btn-primary"
+                               style="display:block;text-align:center;margin-top:20px;">
+                               Get Started
+                            </a>
                         `;
                         grid.appendChild(card);
                     });
+
                     container.appendChild(grid);
                 });
             })
             .catch(error => {
                 console.error("Error loading pricing data:", error);
-                document.getElementById('pricing-container').innerHTML = 
-                    "<p style='text-align:center; color:#ff4444;'>Error loading packages. Please refresh the page.</p>";
+                const skeleton = document.getElementById('skeleton-grid');
+                if (skeleton) skeleton.remove();
+                document.getElementById('pricing-container').innerHTML =
+                    '<p style="text-align:center;color:#ff4444;padding:40px;">⚠️ Error loading packages. Please <a href="javascript:location.reload()" style="color:#fff;text-decoration:underline;">refresh the page</a>.</p>';
             });
+
+        // --- ACTIVE NAV LINK ON SCROLL ---
+        const sections = document.querySelectorAll('section[id], div[id]');
+        window.addEventListener('scroll', () => {
+            let scrollY = window.scrollY + 100;
+            sections.forEach(section => {
+                if (section.offsetTop <= scrollY && section.offsetTop + section.offsetHeight > scrollY) {
+                    allNavLinks.forEach(a => a.classList.remove('active'));
+                    const corresponding = navLinks.querySelector(`a[href="#${section.id}"]`);
+                    if (corresponding) corresponding.classList.add('active');
+                }
+            });
+        });
     </script>
 </body>
 </html>
